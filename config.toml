@@ -1,4 +1,4 @@
-baseURL = "http://blog.sourabhtk37.com/"
+baseURL = "https://blog.sourabhtk37.com/"
 title = ""
 copyright = ""
 
@@ -36,7 +36,7 @@ Paginate = 5
 [author.social]
   facebook = "sourabhtk37"
   github = "sourabhtk37"
-  instagram = "sourabhtk37"
+  instagram = "drenched.coat"
   twitter = "sourabhtk37"
 
 [permalinks]
