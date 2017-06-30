@@ -1,0 +1,61 @@
+baseURL = "http://blog.sourabhtk37.com/"
+title = ""
+copyright = ""
+
+theme = "minimo"
+
+Paginate = 5
+
+[params]
+  description = "The only true wisdom is in knowing that you know nothing - Socrates"
+  dateFormat = "2006, Jan 2"
+  copyrightOwner = "sourabhtk37"
+  copyrightStartYear = "2017"
+  favicon = "favicon.ico"
+  hideEntryNavigation = false
+
+[params.seo]
+  # Title Separator: - – — · • * ⋆ | ~ « » < >
+  titleSeparator = "•"
+
+[params.opengraph]
+  [params.opengraph.facebook]
+    admins = ""
+    appid = ""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[social]
+  facebook = ""
+
+[author]
+  name = "T K Sourabh"
+
+[author.social]
+  facebook = "sourabhtk37"
+  github = "sourabhtk37"
+  instagram = "sourabhtk37"
+  twitter = "sourabhtk37"
+
+[permalinks]
+  page = "/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  weight = -70
+  identifier = "home"
+  url = "/"
+
+
+
+# Language Configuration
+defaultContentLanguage = "en"
+
+[languages]
+  # edit this block for your own language
+  [languages.en]
+    lang = "en"
+    languageName = "English"
+    weight = 1
