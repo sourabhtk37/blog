@@ -2,8 +2,8 @@
 title = "Setting Brightness To Absolute Value"
 date = 2017-06-30T17:25:54+05:30
 slug = ""
-tags = ["linux"]
-categories = ["hacks"]
+tags = []
+categories = ["linux"]
 draft = false
 +++
 
