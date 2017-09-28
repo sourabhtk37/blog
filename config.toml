@@ -13,8 +13,6 @@ Paginate = 5
   copyrightStartYear = "2017"
   favicon = "favicon.ico"
   hideEntryNavigation = false
-  customCSS = ["css/prism.css"]
-  customJS = ["js/prism.js"]
 
 [params.seo]
   # Title Separator: - – — · • * ⋆ | ~ « » < >
@@ -36,6 +34,7 @@ Paginate = 5
 
 [author.social]
   github = "sourabhtk37"
+  email = "mail@sourabhtk37.com"
 
 [permalinks]
   page = "/:slug/"

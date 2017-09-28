@@ -7,7 +7,7 @@ categories = ["linux"]
 draft = false
 +++
 
-I have recently started using [i3wm](https://i3wm.org/) on a full-time basis. Previously, I have been using KDE plasma as preferred DE (checkout [KDE connect](https://community.kde.org/KDEConnect) if using KDE plasma). 
+I have recently started using [i3wm](https://i3wm.org/) on a full-time basis. Previously, I have been using KDE plasma (checkout [KDE connect](https://community.kde.org/KDEConnect) if using KDE plasma). 
 
 This post is simply to share some of the common configs that one might need to add after booting into i3 for the first time. The settings for i3 configs are mostly found at `~/.config/i3/config`, if not copy from `/etc/i3/config`.
 
