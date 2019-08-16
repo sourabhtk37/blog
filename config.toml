@@ -5,39 +5,84 @@ copyright = ""
 theme = "minimo"
 
 Paginate = 5
+preserveTaxonomyNames = true
 
-[params]
+enableRobotsTXT = true # generate robots.txt
+
+# Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
+pygmentsCodefences = true
+
+# Language Configuration
+defaultContentLanguage = "en"
+
+enableEmoji = true
+
+[params.info]
   description = "The only true wisdom is in knowing that you know nothing - Socrates"
-  dateFormat = "2006, Jan 2"
-  copyrightOwner = "sourabhtk37"
-  copyrightStartYear = "2017"
-  favicon = "favicon.ico"
-  hideEntryNavigation = false
+
+[params.assets]
+favicon = "favicon.ico"
+customCSS = ["css/custom.css"]
+customJS = ["js/custom.js"]
+gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+
+[params.copyright]
+prefix = ""
+holder = "Sourabh"
+startYear = "2017"
+suffix = ""
+
+[params.settings]
+# date & time format: https://golang.org/pkg/time/
+dateFormat = "2006, Jan 02"
+listDateFormat = "2006, Jan 02"
+archiveDateFormat = "Jan 02"
+hideEntryNavigation = ["page"] # boolean / array of sections
+hideEntryMeta = ["page"] # boolean / array of sections
+showReadingTime = true
+showLastmod = true
+taxonomyCloudShuffle = true
+accentColor = "#ffcd00"
+hideMainMenu = false
+rtl = false
+
+[params.sidebar]
+enable = false
+
+[params.widgets]
+header = ["breadcrumbs"]
+homepage = ["recent_posts"]
+sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
+footer = ["social_menu"]
 
 [params.seo]
-  # Title Separator: - – — · • * ⋆ | ~ « » < >
-  titleSeparator = "•"
+# Title Separator: - – — · • * ⋆ | ~ « » < >
+titleSeparator = "•"
 
-[params.opengraph]
-  [params.opengraph.facebook]
-    admins = ""
-    appid = ""
+[params.social]
+email = "sourabhtk37@gmail.com"
+github = "sourabhtk37"
+linkedin = "sourabhtk37"
+
+[params.comments]
+enable = false
+
+[params.search]
+client = "fuse" # algolia / fuse / lunr
+
+[params.search.algolia]
+appId = ""
+indexName = ""
+searchApiKey = ""
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
-
-[social]
-
-[author]
-  name = "T K Sourabh"
-
-[author.social]
-  github = "sourabhtk37"
-  email = "mail@sourabhtk37.com"
+author = "authors"
+category = "categories"
+series = "series"
+tag = "tags"
 
 [permalinks]
-  page = "/:slug/"
+page = "/:slug/"
 
 [[menu.main]]
   name = "Home"
@@ -45,14 +90,21 @@ Paginate = 5
   identifier = "home"
   url = "/"
 
-
-
-# Language Configuration
-defaultContentLanguage = "en"
+[blackfriday]
+hrefTargetBlank = true
 
 [languages]
-  # edit this block for your own language
-  [languages.en]
-    lang = "en"
-    languageName = "English"
-    weight = 1
+# edit this block for your own language
+[languages.en]
+lang = "en"
+languageName = "English"
+weight = 1
+
+[author]
+  name = "T K Sourabh"
+
+[author.social]
+  github = "sourabhtk37"
+  email = "sourabhtk37@gmail.com"
+
+
