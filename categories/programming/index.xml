@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on </title>
+    <link>https://sourabhtk37.github.io/blog/categories/programming/</link>
+    <description>Recent content in programming on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 13 Jul 2017 03:01:24 +0530</lastBuildDate>
+    
+	<atom:link href="https://sourabhtk37.github.io/blog/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Pointer Tagging</title>
+      <link>https://sourabhtk37.github.io/blog/post/about-pointer-tagging/</link>
+      <pubDate>Thu, 13 Jul 2017 03:01:24 +0530</pubDate>
+      
+      <guid>https://sourabhtk37.github.io/blog/post/about-pointer-tagging/</guid>
+      <description>From the 100s or 200s of suspended chrome tabs, I opened one of the tabs to make some progress (Imma yuuge procrastinator). This was a LWN article of a talk on Memory use in CPython and MicroPython by Kavya Joshi at PyCon &amp;lsquo;17 (USA). You can find the video of the talk here. It&amp;rsquo;s a great talk.
+The talk contrasts two reference implementation of python:
+ CPython MicroPython  Even though both are implementation of python but they are quite opposite with respect to the memory usage.</description>
+    </item>
+    
+  </channel>
+</rss>

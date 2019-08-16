@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='I have recently started using i3wm on a full-time basis. Previously, I have been using KDE plasma (checkout KDE connect if using KDE plasma).
+This post is simply to share some of the common configs that one might need to add after booting into i3 for the first time. The settings for i3 configs are mostly found at ~/.config/i3/config, if not copy from /etc/i3/config.
+Meta Key I am using windows or host as Meta key.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Brightness, volume control and other stuff in I3 • '>
+<meta property='og:description' content='I have recently started using i3wm on a full-time basis. Previously, I have been using KDE plasma (checkout KDE connect if using KDE plasma).
+This post is simply to share some of the common configs that one might need to add after booting into i3 for the first time. The settings for i3 configs are mostly found at ~/.config/i3/config, if not copy from /etc/i3/config.
+Meta Key I am using windows or host as Meta key.'>
+<meta property='og:url' content='https://sourabhtk37.github.io/blog/post/brightness-and-volume-control-i3/'>
+<meta property='og:site_name' content=''>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:published_time' content='2017-08-01T00:59:58&#43;05:30'/><meta property='article:modified_time' content='2017-08-01T00:59:58&#43;05:30'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.57.1" />
+
+  <title>Brightness, volume control and other stuff in I3 • </title>
+  <link rel='canonical' href='https://sourabhtk37.github.io/blog/post/brightness-and-volume-control-i3/'>
+  
+  
+  <link rel='icon' href='/blog/favicon.ico'>
+<link rel='stylesheet' href='/blog/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/blog/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-post'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/blog/'>Home</a>
+      </li><li class='item'>
+        <a href='/blog/about/'>About</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog/'></a></li><li><a href='/blog/post/'>Posts</a></li><li><span>Brightness, volume control and other stuff in I3</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'></p><p class='desc site-desc'>The only true wisdom is in knowing that you know nothing - Socrates</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Brightness, volume control and other stuff in I3</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2017-08-01T00:59:58&#43;05:30'>2017, Aug 01</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+4 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>I have recently started using <a href="https://i3wm.org/" target="_blank">i3wm</a> on a full-time basis. Previously, I have been using KDE plasma (checkout <a href="https://community.kde.org/KDEConnect" target="_blank">KDE connect</a> if using KDE plasma).</p>
+
+<p>This post is simply to share some of the common configs that one might need to add after booting into i3 for the first time. The settings for i3 configs are mostly found at <code>~/.config/i3/config</code>, if not copy from <code>/etc/i3/config</code>.</p>
+
+<h5 id="meta-key">Meta Key</h5>
+
+<p>I am using windows or host as <strong>Meta key</strong>. To do that simply set the required key to the <code>$mod</code> variable. In my case:</p>
+
+<pre><code>set $mod Mod4
+</code></pre>
+
+<h5 id="terminal">Terminal</h5>
+
+<p>Default terminal is set to <strong>i3-sensible-terminal</strong> which is not sensible at all. I prefer <strong>konsole</strong> terminal from KDE. To change it:</p>
+
+<pre><code>bindsym $mod+return exec /usr/bin/konsole
+</code></pre>
+
+<p>Alternatively, you could also set the <code>$TERMINAL</code> variable.</p>
+
+<h5 id="bar">Bar</h5>
+
+<p>I prefer the bar to be on top of screen. You can simply change that by doing*:</p>
+
+<pre><code>bar {
+	position top
+	status_command i3status
+}
+</code></pre>
+
+<p>*create this block if doesn&rsquo;t exist else edit existing block, unless you want to bars.</p>
+
+<h5 id="volume-control">Volume Control</h5>
+
+<p>Volume keys doesn&rsquo;t  working in most cases. To identify the keycode of the volume button on your keyboard, use the <strong>xev</strong> command to get the <em>content of X events</em>. Use:</p>
+
+<pre><code>xev -event keyboard
+</code></pre>
+
+<p>Upon pressing the volume keys, we will get the keycodes. They are:</p>
+
+<ul>
+<li>XF86AudioRaiseVolume</li>
+<li>XF86AudioLowerVolume</li>
+<li>XF86AudioMute</li>
+</ul>
+
+<p>I am using <strong>amixer</strong> to change the volume. The configuration looks like this:</p>
+
+<pre><code>bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+</code></pre>
+
+<h5 id="brightness-control">Brightness Control</h5>
+
+<p>Use <strong>xev</strong> again for finding the button keycodes for brightness control. Now check whether <strong>xbacklight</strong> is able to detect the drivers. If yes, then simply add the following to the i3 config file:</p>
+
+<pre><code>bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+</code></pre>
+
+<p>If not and you get something like <strong>&ldquo;No outputs have backlight property&rdquo;</strong>, then follow the instructions:</p>
+
+<ul>
+<li><p>Find out the drivers for backlight that is present in your system with:</p>
+
+<pre><code>sudo find /sys/ -type f -iname 'brightness'
+</code></pre></li>
+</ul>
+
+<p>This will give you a hint to the drivers you have. Mine was an <strong>intel_backlight</strong>(others can be <strong>acpi_video0</strong>) with symlink to <code>/sys/class/backlight/intel_backlight/brightness</code>.</p>
+
+<ul>
+<li><p>Change file mod bits so that it can be writable. For that do:</p>
+
+<pre><code>sudo chmod a+rw /sys/class/backlight/intel_backlight/brightness
+</code></pre></li>
+
+<li><p>Next, create a shell script with the content as following:</p>
+
+<pre><code>#!/bin/bash
+
+set -e
+file=&quot;/sys/class/backlight/intel_backlight/brightness&quot;
+current=$(cat &quot;$file&quot;)
+new=&quot;$current&quot;
+
+if [ &quot;$1&quot; = &quot;-inc&quot; ]
+then
+	new=$(( current + $2 ))
+fi
+
+if [ &quot;$1&quot; = &quot;-dec&quot; ]
+then
+new=$(( current - $2 ))
+fi
+
+echo &quot;$new&quot; | tee &quot;$file&quot;
+</code></pre></li>
+
+<li><p>Then simply add the following to i3 config file:</p>
+
+<pre><code>bindsym XF86MonBrightnessUp exec sh ~/.config/i3/backlight.sh -inc 20
+bindsym XF86MonBrightnessDown exec sh ~/.config/i3/backlight.sh -dec 20
+</code></pre></li>
+</ul>
+
+<p><code>~/.config/i3/backlight.sh</code> is path to the shell script shown earlier in my case.</p>
+
+<h5 id="application-shortcuts">Application shortcuts</h5>
+
+<p>You can set shortcuts for frequently used applications by doing something like:</p>
+
+<pre><code>bindsym $mod+c exec google-chrome
+bindsym $mod+g exec geary
+</code></pre>
+
+<p>So, <strong>Meta+c</strong> will open Google Chrome and <strong>Meta+g</strong> will open Geary.</p>
+
+<h5 id="shutdown-reboot-logout-etc">Shutdown, reboot, logout etc</h5>
+
+<p>The following sets <strong>Meta+Escape</strong> to give you a menu to select whether to lock, logout, suspend, hibernate, reboot, shutdown:</p>
+
+<pre><code>set $Locker i3lock &amp;&amp; sleep 1
+
+set $mode_system (l)lock  (e)logout  (s)suspend  (h)hibernate  (r)reboot  (Shift+s)shutdown
+ 
+mode &quot;$mode_system&quot; {
+	bindsym l exec --no-startup-id $Locker, mode &quot;default&quot;
+	bindsym e exec --no-startup-id i3-msg exit, mode &quot;default&quot;
+	bindsym s exec --no-startup-id $Locker &amp;&amp; systemctl suspend, mode &quot;default&quot;
+	bindsym h exec --no-startup-id $Locker &amp;&amp; systemctl hibernate, mode &quot;default&quot;
+	bindsym r exec --no-startup-id systemctl reboot, mode &quot;default&quot;
+	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode &quot;default&quot;
+
+	# back to normal: Enter or Escape
+	bindsym Return mode &quot;default&quot;
+	bindsym Escape mode &quot;default&quot;
+}
+
+bindsym $mod+Escape mode &quot;$mode_system&quot;
+</code></pre>
+
+<h5 id="bonus-xrandr">Bonus: Xrandr</h5>
+
+<p>Check the connected display names and their settings using command <code>xrandr --query</code>.</p>
+
+<p>In my case, they are <strong>eDP-1</strong> for the laptop display and <strong>HDMI-1</strong> or <strong>VGA-1</strong> for external respectively.</p>
+
+<p>Upon connecting external display you can use the following configurations:</p>
+
+<pre><code>set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+
+mode &quot;$mode_display&quot; {
+    bindsym v exec --no-startup-id xrandr --output VGA-1 --auto --right-of eDP-1, mode &quot;default&quot;
+    bindsym h exec --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1, mode &quot;default&quot;
+    bindsym x exec --no-startup-id xrandr --output VGA-1 --auto --off, mode &quot;default&quot;
+    bindsym y exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode &quot;default&quot;
+
+    # back to normal: Enter or Escape
+    bindsym Return mode &quot;default&quot;
+    bindsym Escape mode &quot;default&quot;
+}
+
+bindsym $mod+x mode &quot;$mode_display&quot;
+</code></pre>
+
+<p>You can change whether you want the display on left or right or same as that of <strong>eDP-1</strong> depending on what your usecase is.</p>
+
+<hr />
+
+<h6 id="resources">Resources:</h6>
+
+<ul>
+<li>The <a href="https://i3wm.org/docs/userguide.html" target="_blank">i3 docs</a> are very informative and clear.</li>
+<li><a href="https://wiki.archlinux.org/index.php/I3" target="_blank">Arch wiki of i3</a> is where I got some of the scripts.</li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/blog/categories/linux/'>linux</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/blog/post/about-pointer-tagging/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>About Pointer Tagging</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/blog/post/connecting-bt-speaker-console/'>
+        <span class='screen-reader-text'>Next post: </span>Connect bluetooth speaker from console<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/sourabhtk37' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:sourabhtk37@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/sourabhtk37' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2019 Sourabh </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog/assets/js/"</script>
+
+<script src='/blog/assets/js/main.67d669ac.js'></script><script src='/blog/js/custom.js'></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Like me most you have habit to &ldquo;rage into the dark night&rdquo; with backlit keyboards, f.lux or redshift and what-nots. I find the lowest brightness of the display, attained by pressing the F11 key, to be brighter than my taste.
+So I checked if it&rsquo;s possible to set the brightness level to some value since everything in unix is a file.
+Ofcourse it is, lemme show you&hellip;
+/sys/class/backlight/intel_backlight # Mine is from intel, your&#39;s might be different # Interestingly it’s a symbolic link to -&gt; # /sys/devices/pci.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Setting Brightness To Absolute Value • '>
+<meta property='og:description' content='Like me most you have habit to &ldquo;rage into the dark night&rdquo; with backlit keyboards, f.lux or redshift and what-nots. I find the lowest brightness of the display, attained by pressing the F11 key, to be brighter than my taste.
+So I checked if it&rsquo;s possible to set the brightness level to some value since everything in unix is a file.
+Ofcourse it is, lemme show you&hellip;
+/sys/class/backlight/intel_backlight # Mine is from intel, your&#39;s might be different # Interestingly it’s a symbolic link to -&gt; # /sys/devices/pci.'>
+<meta property='og:url' content='https://sourabhtk37.github.io/blog/post/setting-brightness-to-absolute-value/'>
+<meta property='og:site_name' content=''>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:published_time' content='2017-06-30T17:25:54&#43;05:30'/><meta property='article:modified_time' content='2017-06-30T17:25:54&#43;05:30'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.57.1" />
+
+  <title>Setting Brightness To Absolute Value • </title>
+  <link rel='canonical' href='https://sourabhtk37.github.io/blog/post/setting-brightness-to-absolute-value/'>
+  
+  
+  <link rel='icon' href='/blog/favicon.ico'>
+<link rel='stylesheet' href='/blog/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/blog/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-post'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/blog/'>Home</a>
+      </li><li class='item'>
+        <a href='/blog/about/'>About</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog/'></a></li><li><a href='/blog/post/'>Posts</a></li><li><span>Setting Brightness To Absolute Value</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'></p><p class='desc site-desc'>The only true wisdom is in knowing that you know nothing - Socrates</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Setting Brightness To Absolute Value</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2017-06-30T17:25:54&#43;05:30'>2017, Jun 30</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>Like me most you have habit to &ldquo;rage into the dark night&rdquo; with backlit keyboards, f.lux or redshift and what-nots.
+I find the lowest brightness of the display, attained by pressing the <strong>F11</strong> key, to be brighter than my taste.</p>
+
+<p>So I checked if  it&rsquo;s possible to set the brightness level to some value since <strong>everything in unix
+is a file</strong>.</p>
+
+<p>Ofcourse it is, lemme show you&hellip;</p>
+
+<pre><code>/sys/class/backlight/intel_backlight
+
+# Mine is from intel, your's might be different 
+# Interestingly it’s a symbolic link to -&gt; 
+# /sys/devices/pci../..:02.0/drm/card0/card0-eDP-1/intel_backlight/
+</code></pre>
+
+<p>It contains the the values related to the current display.</p>
+
+<ul>
+<li><code>actual_brightness</code> and <code>brightness</code> shows the current brightness level.</li>
+<li><code>max_brightness</code> gives the maximum brightness value that the display can produce(dunno if I can override that).</li>
+</ul>
+
+<p>Now to change the brightness to absolute value you need to have <strong>root access</strong>.</p>
+
+<pre><code>$ sudo su root
+# echo 10 &gt; /sys/class/backlight/intel_backlight/brightness
+</code></pre>
+
+<p>This will set the brightness level to <strong>10</strong>. <strong>0</strong> means no back-light and <strong>1</strong> is the minimum brightness value (sorry, no decimals).</p>
+
+<p>Read More <a href="https://wiki.archlinux.org/index.php/Backlight" target="_blank">here</a>.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/blog/categories/linux/'>linux</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='next-entry sep-before'>
+      <a href='/blog/post/why-does-a-blog-need-https/'>
+        <span class='screen-reader-text'>Next post: </span>Why Does A Blog Need HTTPS?<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/sourabhtk37' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:sourabhtk37@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/sourabhtk37' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2019 Sourabh </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog/assets/js/"</script>
+
+<script src='/blog/assets/js/main.67d669ac.js'></script><script src='/blog/js/custom.js'></script>
+
+</body>
+
+</html>
+

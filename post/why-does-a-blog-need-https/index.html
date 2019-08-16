@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='I was at the Ilug-D meet-up, while talking about this blog a friend asked me:
+ Why the need for HTTPS in a blog?
+ I couldn&rsquo;t answer it accurately. To answer the question accurately, understanding two things is enough:
+ What&rsquo;s wrong with talking over insecure HTTP? Why use HTTPS?  What&rsquo;s wrong with talking over insecure HTTP? When you are using an insecure http request to access a website:'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Why Does A Blog Need HTTPS? • '>
+<meta property='og:description' content='I was at the Ilug-D meet-up, while talking about this blog a friend asked me:
+ Why the need for HTTPS in a blog?
+ I couldn&rsquo;t answer it accurately. To answer the question accurately, understanding two things is enough:
+ What&rsquo;s wrong with talking over insecure HTTP? Why use HTTPS?  What&rsquo;s wrong with talking over insecure HTTP? When you are using an insecure http request to access a website:'>
+<meta property='og:url' content='https://sourabhtk37.github.io/blog/post/why-does-a-blog-need-https/'>
+<meta property='og:site_name' content=''>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:published_time' content='2017-07-02T02:21:09&#43;05:30'/><meta property='article:modified_time' content='2017-07-02T02:21:09&#43;05:30'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.57.1" />
+
+  <title>Why Does A Blog Need HTTPS? • </title>
+  <link rel='canonical' href='https://sourabhtk37.github.io/blog/post/why-does-a-blog-need-https/'>
+  
+  
+  <link rel='icon' href='/blog/favicon.ico'>
+<link rel='stylesheet' href='/blog/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/blog/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-post'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/blog/'>Home</a>
+      </li><li class='item'>
+        <a href='/blog/about/'>About</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/blog/'></a></li><li><a href='/blog/post/'>Posts</a></li><li><span>Why Does A Blog Need HTTPS?</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'></p><p class='desc site-desc'>The only true wisdom is in knowing that you know nothing - Socrates</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Why Does A Blog Need HTTPS?</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2017-07-02T02:21:09&#43;05:30'>2017, Jul 02</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+3 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>I was at the <a href="//ilugd.github.io/" target="_blank">Ilug-D meet-up</a>, while talking about this blog a friend asked me:</p>
+
+<blockquote>
+<p>Why the need for HTTPS in a blog?</p>
+</blockquote>
+
+<p>I couldn&rsquo;t answer it accurately. To answer the question accurately, understanding two things is enough:</p>
+
+<ul>
+<li>What&rsquo;s wrong with talking over <code>insecure HTTP</code>?</li>
+<li>Why use <code>HTTPS</code>?</li>
+</ul>
+
+<h5 id="what-s-wrong-with-talking-over-insecure-http">What&rsquo;s wrong with talking over insecure HTTP?</h5>
+
+<p>When you are using an insecure http request to access a website:</p>
+
+<ul>
+<li><p>It could be a attacker impersonating as the said website you are visiting. This could lead to phishing and
+the attacker may lure you into giving up your private information.</p></li>
+
+<li><p>One can modify or tamper any data moving between the user and the webserver. This means attackers, ISP, or
+anyone really can inject ads, insert malicious scripts etc, sometimes even tricking users to download malware.
+This is a common scenario in open public wifi. This also mean that the <code>user experience(UX)</code> of your webpage
+<code>goes down</code> significantly.</p></li>
+
+<li><p>It can reveal user behaviour and identity of the user.</p></li>
+</ul>
+
+<p>These man-in-the-middle are quite harmful for the normal functioning of your webpage and the privacy of your user.</p>
+
+<h5 id="why-use-https">Why use HTTPS?</h5>
+
+<p><strong>All of the above stated problems with insecure HTTP are solved by HTTPS.</strong></p>
+
+<hr />
+
+<p>Now to explain a bit more as to why should one be using HTTPS than insecure HTTP in a traditional website:</p>
+
+<ul>
+<li><p>Almost all modern browser are restricting access to resources like location, push notification, payments
+over insecure HTTP. Most features are deprecated in HTTP. They are only available on HTTPS.</p></li>
+
+<li><p>Google search uses HTTPS as a ranking signal. Read about it <a href="//webmasters.googleblog.com/2014/08/https-as-ranking-signal.html" target="_blank">here</a>.</p></li>
+
+<li><p>You can safely grant access to the private information (like geo-location) to the website as it&rsquo;s verified by the certificate authority.</p></li>
+
+<li><p>HTTP/2 features are available only on HTTPS.</p></li>
+
+<li><p>The performance of TLS (SSL is not used nowadays, but people still refer TLS as SSL) is catching up with HTTP. <a href="//istlsfastyet.com" target="_blank">Check here</a></p></li>
+
+<li><p>The performance debate can be countered by performance gain by using features of HTTP/2. <a href="//www.httpvshttps.com/" target="_blank">Check here</a></p></li>
+</ul>
+
+<p>One can buy SSL/TLS certificate from various certificate authorities and enable HTTPS on their webpage.</p>
+
+<p><a href="//letsencrypt.org/" target="_blank">Let&rsquo;s Encrypt</a> is non-profit and open certificate authority that provides <code>free SSL/TLS certificates</code> and have automated
+scripts for obtaining and renewal of certificates. They have issued more than 100 Million certificates so far and get funds
+via crowdfunding and various sponsors.</p>
+
+<p><a href="//www.ssllabs.com/ssltest/" target="_blank">Check</a> how secure is your HTTPS connection.</p>
+
+<hr />
+
+<p>To read more:</p>
+
+<ul>
+<li><a href="//developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https" target="_blank">Why HTTPS Matters</a></li>
+<li><a href="//security.stackexchange.com/questions/52856/why-do-websites-use-https-when-they-dont-need-to" target="_blank">Why do websites use HTTPS when they don&rsquo;t need to?</a></li>
+<li><a href="//www.cloudways.com/blog/why-to-use-https/" target="_blank">Why HTTPS Is Not For Everyone?</a></li>
+<li><a href="//security.stackexchange.com/questions/38832/should-a-site-have-ssl-if-it-doesnt-have-a-login-form" target="_blank">Should a site have SSL if it doesn&rsquo;t have a login form?</a></li>
+</ul>
+
+<p>More on what and how to enable HTTPS:</p>
+
+<ul>
+<li><a href="//developers.google.com/web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology" target="_blank">Important Security Terminology</a></li>
+<li><a href="//developers.google.com/web/fundamentals/security/encrypt-in-transit/enable-https" target="_blank">Enabling HTTPS on Your Servers</a></li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/blog/categories/security/'>security</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/blog/post/setting-brightness-to-absolute-value/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Setting Brightness To Absolute Value</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/blog/post/about-pointer-tagging/'>
+        <span class='screen-reader-text'>Next post: </span>About Pointer Tagging<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/sourabhtk37' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:sourabhtk37@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/sourabhtk37' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2019 Sourabh </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/blog/assets/js/"</script>
+
+<script src='/blog/assets/js/main.67d669ac.js'></script><script src='/blog/js/custom.js'></script>
+
+</body>
+
+</html>
+

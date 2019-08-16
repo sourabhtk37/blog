@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on </title>
+    <link>https://sourabhtk37.github.io/blog/categories/security/</link>
+    <description>Recent content in security on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Jul 2017 02:21:09 +0530</lastBuildDate>
+    
+	<atom:link href="https://sourabhtk37.github.io/blog/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why Does A Blog Need HTTPS?</title>
+      <link>https://sourabhtk37.github.io/blog/post/why-does-a-blog-need-https/</link>
+      <pubDate>Sun, 02 Jul 2017 02:21:09 +0530</pubDate>
+      
+      <guid>https://sourabhtk37.github.io/blog/post/why-does-a-blog-need-https/</guid>
+      <description>I was at the Ilug-D meet-up, while talking about this blog a friend asked me:
+ Why the need for HTTPS in a blog?
+ I couldn&amp;rsquo;t answer it accurately. To answer the question accurately, understanding two things is enough:
+ What&amp;rsquo;s wrong with talking over insecure HTTP? Why use HTTPS?  What&amp;rsquo;s wrong with talking over insecure HTTP? When you are using an insecure http request to access a website:</description>
+    </item>
+    
+  </channel>
+</rss>

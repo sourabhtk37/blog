@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on </title>
+    <link>https://sourabhtk37.github.io/blog/categories/linux/</link>
+    <description>Recent content in linux on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 16 Aug 2019 13:24:50 +0530</lastBuildDate>
+    
+	<atom:link href="https://sourabhtk37.github.io/blog/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Devconf India 2019</title>
+      <link>https://sourabhtk37.github.io/blog/post/devconf_experience/</link>
+      <pubDate>Fri, 16 Aug 2019 13:24:50 +0530</pubDate>
+      
+      <guid>https://sourabhtk37.github.io/blog/post/devconf_experience/</guid>
+      <description>Devconf is an annual developers conference organized by Red Hat attended by students, professionals and enthusiasts alike focusing on FOSS. It was a 2-day event organized in Christ university like last year. Being a part of Red Hat, it was definitely a plus for me to attend Devconf. Simply because it felt like a day out with other Red Hatters. I have also attended last year&amp;rsquo;s Devconf but this year I was speaking as well.</description>
+    </item>
+    
+    <item>
+      <title>Connect bluetooth speaker from console</title>
+      <link>https://sourabhtk37.github.io/blog/post/connecting-bt-speaker-console/</link>
+      <pubDate>Wed, 27 Sep 2017 15:45:43 +0530</pubDate>
+      
+      <guid>https://sourabhtk37.github.io/blog/post/connecting-bt-speaker-console/</guid>
+      <description>Being a heavy console user I would like to have the ability to control everything right from the vincity of the 80*25px window to the world. This post is one such attempts to share whatever things I find and share the configurations with others trying to find the solution for the same.
+Now I have an old bluetooth speaker that I want to use to listen to some light music in the background.</description>
+    </item>
+    
+    <item>
+      <title>Brightness, volume control and other stuff in I3</title>
+      <link>https://sourabhtk37.github.io/blog/post/brightness-and-volume-control-i3/</link>
+      <pubDate>Tue, 01 Aug 2017 00:59:58 +0530</pubDate>
+      
+      <guid>https://sourabhtk37.github.io/blog/post/brightness-and-volume-control-i3/</guid>
+      <description>I have recently started using i3wm on a full-time basis. Previously, I have been using KDE plasma (checkout KDE connect if using KDE plasma).
+This post is simply to share some of the common configs that one might need to add after booting into i3 for the first time. The settings for i3 configs are mostly found at ~/.config/i3/config, if not copy from /etc/i3/config.
+Meta Key I am using windows or host as Meta key.</description>
+    </item>
+    
+    <item>
+      <title>Setting Brightness To Absolute Value</title>
+      <link>https://sourabhtk37.github.io/blog/post/setting-brightness-to-absolute-value/</link>
+      <pubDate>Fri, 30 Jun 2017 17:25:54 +0530</pubDate>
+      
+      <guid>https://sourabhtk37.github.io/blog/post/setting-brightness-to-absolute-value/</guid>
+      <description>Like me most you have habit to &amp;ldquo;rage into the dark night&amp;rdquo; with backlit keyboards, f.lux or redshift and what-nots. I find the lowest brightness of the display, attained by pressing the F11 key, to be brighter than my taste.
+So I checked if it&amp;rsquo;s possible to set the brightness level to some value since everything in unix is a file.
+Ofcourse it is, lemme show you&amp;hellip;
+/sys/class/backlight/intel_backlight # Mine is from intel, your&#39;s might be different # Interestingly it’s a symbolic link to -&amp;gt; # /sys/devices/pci.</description>
+    </item>
+    
+  </channel>
+</rss>
